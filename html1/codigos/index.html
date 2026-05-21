@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío</title>
+    <link rel="stylesheet" href="../estilos/styles.css">
+</head>
+<body>
+
+    <main class="contenedor-principal">
+        <h1>Desafío: Simuladores Interactivos</h1>
+
+        <section class="tarjeta-simulador">
+            <h2>Ejercicio 1: Simulador de Transferencia de Calor</h2>
+            <form id="formCalor">
+                <div class="campo">
+                    <label for="t0">Temperatura Inicial (T₀) en °F:</label>
+                    <input type="number" id="t0" value="120" required>
+                </div>
+                
+                <div class="campo">
+                    <label for="ts">Temperatura del Entorno (Ts) en °F:</label>
+                    <input type="number" id="ts" value="38" required>
+                </div>
+                
+                <div class="campo">
+                    <label for="k">Constante de Enfriamiento (k):</label>
+                    <input type="number" id="k" value="0.45" step="0.01" required>
+                </div>
+                
+                <div class="campo">
+                    <label for="tiempo">Tiempo (t) en horas:</label>
+                    <input type="number" id="tiempo" value="3" required>
+                </div>
+
+                <button type="button" onclick="calcularCalor()">Calcular Temperatura Final</button>
+            </form>
+
+            <div class="contenedor-resultado">
+                <p>Resultado: <span id="resultadoCalor" class="resaltado">-</span></p>
+            </div>
+        </section>
+
+        <section class="tarjeta-simulador">
+            <h2>Ejercicio 2: Calculador de Combinaciones</h2>
+            <form id="formCombinaciones">
+                <h3>Grupo 1</h3>
+                <div class="campo-grupo">
+                    <label for="n1">Total Objetos (n1):</label>
+                    <input type="number" id="n1" value="59" required>
+                    <label for="r1">Objetos a elegir (r1):</label>
+                    <input type="number" id="r1" value="5" required>
+                </div>
+
+                <h3>Grupo 2</h3>
+                <div class="campo-grupo">
+                    <label for="n2">Total Objetos (n2):</label>
+                    <input type="number" id="n2" value="35" required>
+                    <label for="r2">Objetos a elegir (r2):</label>
+                    <input type="number" id="r2" value="1" required>
+                </div>
+
+                <button type="button" onclick="calcularCombinaciones()">Calcular Combinaciones Totales</button>
+            </form>
+
+            <div class="contenedor-resultado">
+                <p>Resultado Total: <span id="resultadoCombinaciones" class="resaltado">-</span></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="../jv/script.js"></script>
+
+</body>
+</html>
